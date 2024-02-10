@@ -61,7 +61,33 @@ Refresh Table-Plus `Cmd + R`
 ```
 Refresh Table-Plus `Cmd + R`
 
-# Golang database libraries
+## Golang database libraries
 ![things to consider](golang-database.png) <br>
 Decision: `sqlc` <br>
-Installation: `> brew install sqlc`
+Installation: `> brew install sqlc` <br>
+Configuration sqlc = `sqlc.yaml` <br>
+Documentation [sqlc configuration](https://docs.sqlc.dev/en/stable/reference/config.html)
+
+## Generate CRUD golang code from sql
+Use `sqlc` to write sql code and transform into golang code <br>
+See [sqlc documentation](https://docs.sqlc.dev/en/latest/)
+The CRUD operations for tables `accounts`, `entries` and `transfers` of database simple_bank are specified in files:
+```
+db/query/account.sql
+db/query/entry.sql
+db/qquery/transfer.sql
+```
+Then: generate golang code
+```
+> make sqlc
+```
+The next golang code will be created in package "db"
+```
+/db/account.sql.go          # CRUD operations table accounts
+/db/entry.sql.go            # CRUD operations table entries
+/db/transfers.sql.go        # CRUD operation table transfers
+/db/db.go                   # Queries struct that implements DBTX interface (DB=database, TX=Transaction)
+/db/model.go                # Struct for each table
+```
+Do not edit these golang files!!
+
