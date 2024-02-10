@@ -83,11 +83,11 @@ Then: generate golang code
 ```
 The next golang code will be created in package "db"
 ```
-/db/account.sql.go          # CRUD operations table accounts
-/db/entry.sql.go            # CRUD operations table entries
-/db/transfers.sql.go        # CRUD operation table transfers
-/db/db.go                   # Queries struct that implements DBTX interface (DB=database, TX=Transaction)
-/db/model.go                # Struct for each table
+/db/sqlc/account.sql.go          # CRUD operations table accounts
+/db/sqlc/entry.sql.go            # CRUD operations table entries
+/db/sqlc/transfers.sql.go        # CRUD operation table transfers
+/db/sqlc/db.go                   # Queries struct that implements DBTX interface (DB=database, TX=Transaction)
+/db/sqlc/model.go                # Struct for each table
 ```
 Do not edit these golang files!!
 
