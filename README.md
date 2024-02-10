@@ -1,9 +1,9 @@
 # simple-bank
 
 ## SQL script to create tables
-Postgresql SQL statements to create `simple bank` tables exported
-from dbdiagram.io: [simple bank](https://dbdiagram.io/d/simple-bank-65c391b8ac844320aea89c27)
-to  `db/sql/simple-bank.sql`
+Postgresql SQL statements to create `simple bank` tables exported <br>
+from dbdiagram.io: [simple bank](https://dbdiagram.io/d/simple-bank-65c391b8ac844320aea89c27) <br>
+to  `db/dbdiagram.io/simple-bank.sql`
 
 ## golang-migrate
 Github Repo: [golang-migrate](https://github.com/golang-migrate/migrate)
@@ -60,3 +60,8 @@ Refresh Table-Plus `Cmd + R`
 > make migratedown
 ```
 Refresh Table-Plus `Cmd + R`
+
+# Golang database libraries
+![things to consider](golang-database.png) <br>
+Decision: `sqlc` <br>
+Installation: `> brew install sqlc`
