@@ -5,6 +5,13 @@ Postgresql SQL statements to create `simple bank` tables exported <br>
 from dbdiagram.io: [simple bank](https://dbdiagram.io/d/simple-bank-65c391b8ac844320aea89c27) <br>
 to  `db/dbdiagram.io/simple-bank.sql`
 
+## Deploy Postgres
+```
+docker run --name prostgres16 -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=secret -d postgres:16-alpine
+docker exec -it postgres16 psql -U root  # Locally login to postgres
+docker logs postgress16                  # Display docker log files of postgres16 container
+```
+
 ## golang-migrate
 Github Repo: [golang-migrate](https://github.com/golang-migrate/migrate)
 
